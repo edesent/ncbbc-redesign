@@ -4,15 +4,15 @@
   --font-sans: var(--font-sans-site);
   --font-serif: var(--font-serif-site);
   --color-ink: #111827;
-  --color-forest: #173c35;
-  --color-forest-soft: #dce7df;
-  --color-brass: #c39743;
-  --color-rust: #a84932;
-  --color-wine: #6f2632;
-  --color-cream: #f5f1e8;
-  --color-paper: #fbfaf7;
-  --color-stone: #6f6a61;
-  --color-line: #ded7c8;
+  --color-forest: #082f49;
+  --color-forest-soft: #e6eef5;
+  --color-brass: #c51f2f;
+  --color-rust: #f4c542;
+  --color-wine: #8f1826;
+  --color-cream: #f3f5f7;
+  --color-paper: #ffffff;
+  --color-stone: #4f5661;
+  --color-line: #d8dde5;
 }
 
 * {
@@ -33,9 +33,11 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 img {
@@ -43,5 +45,12 @@ img {
 }
 
 ::selection {
-  background: rgba(195, 151, 67, 0.26);
+  background: rgba(197, 31, 47, 0.2);
+}
+
+.school-heading {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }

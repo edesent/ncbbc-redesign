@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ "--font-sans-site": "Arial, Helvetica, sans-serif", "--font-serif-site": "Georgia, 'Times New Roman', serif" } as React.CSSProperties}>
+      <body style={{ "--font-sans-site": "'Open Sans', Arial, Helvetica, sans-serif", "--font-serif-site": "'Arial Narrow', 'Helvetica Neue Condensed', Impact, sans-serif" } as React.CSSProperties}>
         <Header />
         {children}
         <CtaBand />
