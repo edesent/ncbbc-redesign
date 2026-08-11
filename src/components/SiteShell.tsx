@@ -23,13 +23,19 @@ export function Header() {
         </div>
       </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
-        <Link href="/" className="flex min-w-0 items-center gap-4">
-          <Image src="/ncbbc-logo.png" alt="" width={72} height={72} className="h-16 w-16 shrink-0" priority />
+        <div className="flex min-w-0 items-center gap-4">
+          <Link href="/" aria-label={`${site.fullName} home`} className="shrink-0">
+            <Image src="/ncbbc-logo.png" alt="" width={72} height={72} className="h-16 w-16 shrink-0" priority />
+          </Link>
           <div className="min-w-0">
-            <p className="text-2xl font-black leading-none text-ink sm:text-3xl">{site.name}</p>
-            <p className="truncate text-xs font-black uppercase tracking-[0.12em] text-brass sm:max-w-none">{site.fullName}</p>
+            <Link href="/" className="block text-2xl font-black leading-none text-ink transition hover:text-brass sm:text-3xl">
+              {site.name}
+            </Link>
+            <Link href="/" className="mt-1 block max-w-[16rem] text-xs font-black uppercase leading-snug tracking-[0.12em] text-brass transition hover:text-wine sm:max-w-none">
+              {site.fullName}
+            </Link>
           </div>
-        </Link>
+        </div>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
           {navItems.map((item) => (
