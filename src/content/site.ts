@@ -46,7 +46,7 @@ export const site = {
   name: "NCBBC",
   fullName: "Northern Colorado Baptist Bible College",
   tagline: "His Last Command. Our First Priority.",
-  url: "https://www.ncbbc.org",
+  url: "https://ncbbc.elijahdesent.com",
   phone: "303.659.3818",
   email: "help@ncbbc.org",
   admissionsEmail: "admissions@ncbbc.org",

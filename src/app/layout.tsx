@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `${site.fullName} | Online Bible College`,
-    template: `%s | ${site.name}`,
+    template: `%s | ${site.fullName}`,
   },
   description: "Online Baptist Bible college training students for faithful ministry through the local New Testament church.",
   openGraph: {
