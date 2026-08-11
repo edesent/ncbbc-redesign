@@ -35,7 +35,7 @@ export function RenderBlocks({ blocks }: { blocks: ContentBlock[] }) {
 function Block({ block }: { block: ContentBlock }) {
   if (block.type === "intro") {
     return (
-      <section className="mx-auto max-w-4xl">
+      <section className="max-w-5xl">
         <div className="space-y-5 text-lg leading-8 text-stone">
           {block.text.map((text) => (
             <p key={text}>{text}</p>
@@ -77,7 +77,7 @@ function Block({ block }: { block: ContentBlock }) {
 
   if (block.type === "list") {
     return (
-      <section className="mx-auto max-w-4xl rounded-md border border-line bg-cream p-6">
+      <section className="max-w-5xl rounded-md border border-line bg-cream p-6">
         {block.title ? <h2 className="school-heading text-3xl leading-tight text-forest">{block.title}</h2> : null}
         <ul className="mt-4 grid gap-3">
           {block.items.map((item) => (
