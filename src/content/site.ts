@@ -31,6 +31,7 @@ export type ContentBlock =
   | { type: "list"; title?: string; items: string[] }
   | { type: "people"; title: string; groups: { heading: string; names: string[] }[] }
   | { type: "courses"; groups: { title: string; courses: { code: string; title: string; text: string; note?: string }[] }[] }
+  | { type: "profile"; image: string; alt: string; eyebrow: string; name: string; title: string; text: string }
   | { type: "signature"; signoff: string; image: string; alt: string; name: string; title: string }
   | { type: "form" };
 
@@ -164,6 +165,15 @@ export const pages: PageContent[] = [
     summary: "A letter from Dr. Gary L. Randall on NCBBC's purpose, doctrinal commitment, and online ministry-training format.",
     image: "/main-building.jpg",
     blocks: [
+      {
+        type: "profile",
+        image: "/pastor-gary-randall.webp",
+        alt: "Dr. Gary and Betty Randall",
+        eyebrow: "College President",
+        name: "Dr. Gary L. Randall",
+        title: "President, Northern Colorado Baptist Bible College",
+        text: "Dr. Randall leads NCBBC with a heart for training faithful servants through local church ministry and Bible-centered online instruction.",
+      },
       {
         type: "intro",
         text: [

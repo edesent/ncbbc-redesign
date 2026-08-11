@@ -135,6 +135,22 @@ function Block({ block }: { block: ContentBlock }) {
     );
   }
 
+  if (block.type === "profile") {
+    return (
+      <section className="grid max-w-5xl overflow-hidden rounded-md border border-line bg-white shadow-sm md:grid-cols-[0.45fr_0.55fr]">
+        <div className="relative min-h-80 bg-cream">
+          <Image src={block.image} alt={block.alt} fill className="object-cover" sizes="(min-width: 768px) 28rem, 100vw" />
+        </div>
+        <div className="flex flex-col justify-center p-7 sm:p-8">
+          <p className="font-black uppercase tracking-[0.18em] text-brass">{block.eyebrow}</p>
+          <h2 className="school-heading mt-3 text-4xl leading-tight text-forest">{block.name}</h2>
+          <p className="mt-2 font-black uppercase tracking-[0.12em] text-stone">{block.title}</p>
+          <p className="mt-5 text-lg leading-8 text-stone">{block.text}</p>
+        </div>
+      </section>
+    );
+  }
+
   if (block.type === "signature") {
     return (
       <section className="max-w-5xl border-l-4 border-brass pl-5">
