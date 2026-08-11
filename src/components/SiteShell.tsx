@@ -82,8 +82,8 @@ export function Footer() {
   return (
     <footer className="bg-forest text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.7fr_0.7fr_0.7fr]">
-        <div>
-          <Image src="/ncbbc-logo.png" alt="" width={72} height={72} className="h-16 w-16 bg-white p-1" />
+        <div className="flex flex-col items-center text-center">
+          <Image src="/ncbbc-logo.png" alt="" width={128} height={128} className="h-28 w-28 object-contain" />
           <h2 className="school-heading mt-5 max-w-xl text-3xl leading-tight">{site.fullName}</h2>
           <p className="mt-3 max-w-2xl text-white/72">
             A ministry of Elmwood Baptist Church in Brighton, Colorado, training students for faithful service in the local New Testament church.
