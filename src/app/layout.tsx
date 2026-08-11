@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "Bible-centered online ministry training in Brighton, Colorado.",
     url: site.url,
     siteName: site.fullName,
-    images: [{ url: "/hero-campus.jpg", width: 1920, height: 957 }],
+    images: [{ url: "/hero-online-bible-degree.webp", width: 1672, height: 941 }],
     locale: "en_US",
     type: "website",
   },

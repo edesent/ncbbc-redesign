@@ -20,14 +20,36 @@ const collegeSchema = {
   },
 };
 
+const heroTiles = [
+  {
+    src: "/hero-men-online-class.webp",
+    alt: "Student taking an online Bible class from his desk",
+  },
+  {
+    src: "/hero-class-teaching.webp",
+    alt: "Men listening during a Bible class",
+  },
+  {
+    src: "/hero-men-in-class.webp",
+    alt: "Men studying the Bible together in class",
+  },
+];
+
 export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collegeSchema) }} />
       <main>
         <section className="relative min-h-[calc(100svh-136px)] overflow-hidden bg-forest text-white">
-          <Image src="/hero-campus.jpg" alt="" fill priority className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,47,73,0.12),rgba(8,47,73,0.82)),linear-gradient(90deg,rgba(7,27,45,0.82),rgba(7,27,45,0.36)_52%,rgba(143,24,38,0.42))]" />
+          <Image
+            src="/hero-online-bible-degree.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,47,73,0.08),rgba(8,47,73,0.88)),linear-gradient(90deg,rgba(7,27,45,0.88),rgba(7,27,45,0.58)_42%,rgba(143,24,38,0.32))]" />
           <div className="relative mx-auto grid min-h-[calc(100svh-136px)] max-w-7xl items-center gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.25fr_0.75fr]">
             <div className="min-w-0 lg:pr-12">
               <p className="font-black uppercase tracking-[0.22em] text-white/82">Online Bible College | Brighton, Colorado</p>
@@ -45,7 +67,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="border-white/70 lg:border-l lg:pl-12">
+            <div className="bg-forest/70 p-5 shadow-2xl backdrop-blur-sm sm:p-6 lg:border-l lg:border-white/40 lg:bg-transparent lg:p-0 lg:pl-12 lg:shadow-none lg:backdrop-blur-0">
               <h2 className="school-heading text-5xl leading-none text-white drop-shadow-md">Why NCBBC?</h2>
               <p className="mt-5 max-w-md text-lg leading-8 text-white/78">
                 {site.tagline} Train at your pace while staying rooted in faithful local church ministry.
@@ -57,6 +79,19 @@ export default function Home() {
                 <Link href="/course-descriptions" className="inline-flex w-full items-center justify-center rounded-md bg-brass px-6 py-4 font-black uppercase tracking-[0.08em] text-white transition hover:bg-wine sm:w-auto">
                   View Courses
                 </Link>
+              </div>
+              <div className="mt-7 grid grid-cols-3 gap-2">
+                {heroTiles.map((image) => (
+                  <div key={image.src} className="relative aspect-[4/3] overflow-hidden border border-white/20">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 10vw, 30vw"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
