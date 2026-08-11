@@ -20,21 +20,6 @@ const collegeSchema = {
   },
 };
 
-const heroTiles = [
-  {
-    src: "/hero-men-online-class.webp",
-    alt: "Student taking an online Bible class from his desk",
-  },
-  {
-    src: "/hero-class-teaching.webp",
-    alt: "Men listening during a Bible class",
-  },
-  {
-    src: "/hero-men-in-class.webp",
-    alt: "Men studying the Bible together in class",
-  },
-];
-
 export default function Home() {
   return (
     <>
@@ -67,7 +52,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="bg-forest/70 p-5 shadow-2xl backdrop-blur-sm sm:p-6 lg:border-l lg:border-white/40 lg:bg-transparent lg:p-0 lg:pl-12 lg:shadow-none lg:backdrop-blur-0">
+            <div className="bg-forest/88 p-5 shadow-2xl sm:p-6 lg:border-l lg:border-white/40 lg:bg-transparent lg:p-0 lg:pl-12 lg:shadow-none">
               <h2 className="school-heading text-5xl leading-none text-white drop-shadow-md">Why NCBBC?</h2>
               <p className="mt-5 max-w-md text-lg leading-8 text-white/78">
                 {site.tagline} Train at your pace while staying rooted in faithful local church ministry.
@@ -80,18 +65,10 @@ export default function Home() {
                   View Courses
                 </Link>
               </div>
-              <div className="mt-7 grid grid-cols-3 gap-2">
-                {heroTiles.map((image) => (
-                  <div key={image.src} className="relative aspect-[4/3] overflow-hidden border border-white/20">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(min-width: 1024px) 10vw, 30vw"
-                    />
-                  </div>
-                ))}
+              <div className="mt-8 grid gap-3 border-t border-white/25 pt-6 text-sm font-black uppercase tracking-[0.14em] text-white/82 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                <p>Online Courses</p>
+                <p>Local Church Focus</p>
+                <p>Free Tuition</p>
               </div>
             </div>
           </div>
@@ -150,7 +127,7 @@ export default function Home() {
         <section className="bg-white px-4 py-16 sm:px-6 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
             <div className="relative aspect-[4/3] overflow-hidden">
-              <Image src="/study-desk.jpeg" alt="Open Bible and study materials on a desk" fill className="object-cover" sizes="(min-width: 1024px) 46vw, 100vw" />
+              <Image src="/hero-men-online-class.webp" alt="Student taking an online Bible class from his desk" fill className="object-cover" sizes="(min-width: 1024px) 46vw, 100vw" />
               <div className="absolute bottom-0 left-0 right-0 bg-wine p-5 text-white">
                 <p className="font-black uppercase tracking-[0.14em]">Serve where you are. Learn where you live.</p>
               </div>
