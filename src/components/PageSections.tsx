@@ -139,41 +139,49 @@ function Block({ block }: { block: ContentBlock }) {
 }
 
 function ApplicationForm() {
+  const inputClass =
+    "min-h-12 rounded-md border border-line bg-white px-4 py-3 text-base font-semibold text-ink outline-none transition placeholder:text-stone/45 focus:border-brass focus:ring-4 focus:ring-brass/12";
+  const labelClass = "grid gap-2 text-xs font-black uppercase tracking-[0.14em] text-stone";
+
   return (
-    <section className="grid overflow-hidden rounded-md border border-line bg-white shadow-sm lg:grid-cols-[0.85fr_1.15fr]">
-      <div className="bg-forest p-7 text-white">
-        <p className="font-black uppercase tracking-[0.18em] text-brass">Admissions Office</p>
-        <h2 className="school-heading mt-3 text-4xl leading-tight">Send your first application details.</h2>
-        <div className="mt-8 space-y-4 text-white/76">
-          <p className="flex gap-3">
+    <section className="grid overflow-hidden rounded-md border border-line bg-white shadow-lg lg:grid-cols-[0.82fr_1.18fr]">
+      <div className="relative overflow-hidden bg-forest p-7 text-white sm:p-8">
+        <div className="absolute inset-x-0 top-0 h-2 bg-brass" />
+        <p className="font-black uppercase tracking-[0.2em] text-brass">Admissions Office</p>
+        <h2 className="school-heading mt-3 text-4xl leading-tight">Start your application conversation.</h2>
+        <p className="mt-5 leading-7 text-white/72">
+          Send your basic details to the admissions office and we will help you with the next step.
+        </p>
+        <div className="mt-8 grid gap-4 text-white/78">
+          <a href={`mailto:${site.admissionsEmail}`} className="flex gap-3 rounded-md border border-white/12 bg-white/8 p-4 transition hover:bg-white/12 hover:text-white">
             <Mail className="mt-1 shrink-0 text-brass" size={20} />
-            {site.admissionsEmail}
-          </p>
-          <p className="flex gap-3">
+            <span className="min-w-0 break-words">{site.admissionsEmail}</span>
+          </a>
+          <a href={site.map} className="flex gap-3 rounded-md border border-white/12 bg-white/8 p-4 transition hover:bg-white/12 hover:text-white">
             <MapPin className="mt-1 shrink-0 text-brass" size={20} />
-            {site.address}
-          </p>
+            <span>{site.address}</span>
+          </a>
         </div>
       </div>
-      <form action={`mailto:${site.admissionsEmail}`} method="post" encType="text/plain" className="grid gap-4 p-6">
+      <form action={`mailto:${site.admissionsEmail}`} method="post" encType="text/plain" className="grid gap-5 bg-paper p-6 sm:p-8">
         <div className="grid gap-4 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-bold text-stone">
+          <label className={labelClass}>
             Name
-            <input name="name" className="rounded-md border border-line bg-paper px-4 py-3 text-base text-ink outline-none focus:border-brass" />
+            <input name="name" placeholder="Your full name" className={inputClass} />
           </label>
-          <label className="grid gap-2 text-sm font-bold text-stone">
+          <label className={labelClass}>
             Email
-            <input name="email" type="email" className="rounded-md border border-line bg-paper px-4 py-3 text-base text-ink outline-none focus:border-brass" />
+            <input name="email" type="email" placeholder="you@example.com" className={inputClass} />
           </label>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <label className="grid gap-2 text-sm font-bold text-stone">
+          <label className={labelClass}>
             Phone
-            <input name="phone" className="rounded-md border border-line bg-paper px-4 py-3 text-base text-ink outline-none focus:border-brass" />
+            <input name="phone" placeholder="Best phone number" className={inputClass} />
           </label>
-          <label className="grid gap-2 text-sm font-bold text-stone">
+          <label className={labelClass}>
             Program Interest
-            <select name="program" className="rounded-md border border-line bg-paper px-4 py-3 text-base text-ink outline-none focus:border-brass">
+            <select name="program" className={inputClass}>
               <option>Bachelor of Ministry</option>
               <option>Master of Ministry</option>
               <option>Doctor of Ministry</option>
@@ -181,11 +189,11 @@ function ApplicationForm() {
             </select>
           </label>
         </div>
-        <label className="grid gap-2 text-sm font-bold text-stone">
+        <label className={labelClass}>
           Message
-          <textarea name="message" rows={5} className="rounded-md border border-line bg-paper px-4 py-3 text-base text-ink outline-none focus:border-brass" />
+          <textarea name="message" rows={5} placeholder="Tell us where you serve and what you would like to study." className={inputClass} />
         </label>
-        <button className="inline-flex items-center justify-center gap-2 rounded-md bg-wine px-5 py-3 font-black text-white transition hover:bg-forest">
+        <button className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-brass px-6 py-4 font-black uppercase tracking-[0.08em] text-white shadow-sm transition hover:bg-wine">
           Send by Email
           <ArrowRight size={18} />
         </button>
