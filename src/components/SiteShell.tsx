@@ -28,11 +28,9 @@ export function Header() {
             <Image src="/ncbbc-logo.png" alt="" width={72} height={72} className="h-16 w-16 shrink-0" priority />
           </Link>
           <div className="min-w-0">
-            <Link href="/" className="block text-2xl font-black leading-none text-ink transition hover:text-brass sm:text-3xl">
-              {site.name}
-            </Link>
-            <Link href="/" className="mt-1 block max-w-[16rem] text-xs font-black uppercase leading-snug tracking-[0.12em] text-brass transition hover:text-wine sm:max-w-none">
-              {site.fullName}
+            <Link href="/" className="group block max-w-[14rem] text-[0.94rem] font-black uppercase leading-[0.98] tracking-[0.06em] transition sm:max-w-none sm:text-xl xl:text-2xl">
+              <span className="block text-ink transition group-hover:text-brass">Northern Colorado</span>
+              <span className="block text-brass transition group-hover:text-wine">Baptist Bible College</span>
             </Link>
           </div>
         </div>
