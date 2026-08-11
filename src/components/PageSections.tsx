@@ -135,6 +135,17 @@ function Block({ block }: { block: ContentBlock }) {
     );
   }
 
+  if (block.type === "signature") {
+    return (
+      <section className="max-w-5xl border-l-4 border-brass pl-5">
+        <p className="text-lg font-semibold text-stone">{block.signoff}</p>
+        <Image src={block.image} alt={block.alt} width={360} height={131} className="mt-3 h-auto w-60 sm:w-72" />
+        <p className="mt-2 font-black uppercase tracking-[0.14em] text-ink">{block.name}</p>
+        <p className="mt-1 text-sm font-black uppercase tracking-[0.18em] text-brass">{block.title}</p>
+      </section>
+    );
+  }
+
   return <ApplicationForm />;
 }
 

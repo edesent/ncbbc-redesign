@@ -31,6 +31,7 @@ export type ContentBlock =
   | { type: "list"; title?: string; items: string[] }
   | { type: "people"; title: string; groups: { heading: string; names: string[] }[] }
   | { type: "courses"; groups: { title: string; courses: { code: string; title: string; text: string; note?: string }[] }[] }
+  | { type: "signature"; signoff: string; image: string; alt: string; name: string; title: string }
   | { type: "form" };
 
 export type PageContent = {
@@ -171,8 +172,15 @@ export const pages: PageContent[] = [
           "Our program of study is streamlined and does not have semesters or years, allowing you the opportunity to work at your own pace on your own schedule from the privacy of your home or office.",
           "NCBBC is blessed with qualified instructors with many years of ministry experience. This greatly enhances each student's training here at NCBBC. All video lectures are online.",
           "Northern Colorado Baptist Bible College is a ministry of Elmwood Baptist Church and maintains a strong commitment to the King James Bible, sound doctrine, the Baptist distinctives, personal and ecclesiastical separation, conservative music, and personal evangelism.",
-          "In Christ's service, Dr. Gary L. Randall, President",
         ],
+      },
+      {
+        type: "signature",
+        signoff: "In Christ's service,",
+        image: "/pastor-randall-signature.png",
+        alt: "Signature of Dr. Gary L. Randall",
+        name: "Dr. Gary L. Randall",
+        title: "President",
       },
     ],
   },
