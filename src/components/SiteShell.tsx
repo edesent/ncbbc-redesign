@@ -150,12 +150,12 @@ export function CtaBand() {
           <p className="font-black uppercase tracking-[0.18em] text-white/70">Ready to begin?</p>
           <h2 className="school-heading mt-2 text-4xl leading-tight">Prepare for ministry from wherever you serve.</h2>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Link href="/application" className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-5 py-3 font-black text-[#8f1826] transition hover:bg-cream">
+        <div className="flex w-full flex-col gap-3 md:w-72">
+          <Link href="/application" className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white px-5 py-3 font-black text-[#8f1826] transition hover:bg-cream">
             Apply Now
             <ArrowRight size={18} />
           </Link>
-          <Link href="/contact-us" className="inline-flex items-center justify-center rounded-md border border-white/30 px-5 py-3 font-black text-white transition hover:bg-white/10">
+          <Link href="/contact-us" className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-3 font-black text-white transition hover:bg-white/10">
             <FileText size={18} />
             Ask a Question
           </Link>
