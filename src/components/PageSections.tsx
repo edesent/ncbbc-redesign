@@ -162,6 +162,10 @@ function Block({ block }: { block: ContentBlock }) {
     );
   }
 
+  if (block.type === "studentApplication") {
+    return <StudentApplication />;
+  }
+
   return <ApplicationForm />;
 }
 
