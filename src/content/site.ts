@@ -33,7 +33,8 @@ export type ContentBlock =
   | { type: "courses"; groups: { title: string; courses: { code: string; title: string; text: string; note?: string }[] }[] }
   | { type: "profile"; image: string; alt: string; eyebrow: string; name: string; title: string; text: string }
   | { type: "signature"; signoff: string; image: string; alt: string; name: string; title: string }
-  | { type: "form" };
+  | { type: "form" }
+  | { type: "studentApplication" };
 
 export type PageContent = {
   slug: string;
