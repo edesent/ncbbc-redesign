@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Mail, MapPin } from "lucide-react";
 import type { ContentBlock, PageContent } from "@/content/site";
 import { site } from "@/content/site";
+import { StudentApplication } from "@/components/StudentApplication";
 
 export function PageHero({ page }: { page: PageContent }) {
   return (
